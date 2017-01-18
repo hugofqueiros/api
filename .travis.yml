@@ -7,6 +7,13 @@ before_install:
   - sudo apt-get install -y -qq yarn
 install:
   - yarn install
+git:
+  depth: 3
+# safelist
+branches:
+  only:
+  - master
+  - develop
 cache:
   directories:
   - $HOME/.yarn-cache
