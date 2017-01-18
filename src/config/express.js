@@ -5,8 +5,12 @@ import bodyParser from 'body-parser';
 import config from './config';
 import {normalizePort} from './utils';
 import logger from 'morgan';
+import mongoose from 'mongoose';
+import bluebird from 'bluebird';
 
-import routes from './routes/index'
+import routes from './routes/'
+
+mongoose.Promise = bluebird;
 
 let app = express();
 
@@ -28,12 +32,14 @@ app.use(bodyParser.json({
     limit: config.bodyLimit
 }));
 
+// Connect all routes to app
 app.use('/api', routes);
 
-app.listen(port);
-console.log('Magic happens on port: ', port);
+app.listen(port, () => {
+    console.log('App listening on port: ', port);
+});
 
-//export default app;
+
 
 
 
