@@ -1,18 +1,15 @@
 import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
+import compress from 'compression';
 import bodyParser from 'body-parser';
 import config from './config';
-import {normalizePort} from './utils';
+import {normalizePort} from '../utils';
 import logger from 'morgan';
-import mongoose from 'mongoose';
-import bluebird from 'bluebird';
 
-import routes from './routes/'
+import routes from '../routes/'
 
-mongoose.Promise = bluebird;
-
-let app = express();
+const app = express();
 
 app.use(logger('dev'));
 
