@@ -8,5 +8,3 @@ const defaults = {
 };
 
 export default Object.assign(defaults, config);
-
-

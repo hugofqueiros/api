@@ -1,3 +1,5 @@
+import httpStatus from 'http-status';
+
 export const normalizePort = (val) => {
     const port = parseInt(val, 10);
 
