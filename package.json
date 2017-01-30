@@ -75,6 +75,7 @@
     "helmet": "3.4.0",
     "http-status": "^0.2.5",
     "joi": "^10.2.0",
+    "lodash": "^4.17.4",
     "method-override": "^2.3.7",
     "mongodb": "2.2.21",
     "mongoose": "4.7.7",
