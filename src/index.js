@@ -6,6 +6,8 @@ import confEnv from './config/env';
 import app from './config/express';
 import config from './config/config';
 import {normalizePort} from './utils/utils';
+import {fs} from 'fs';
+import https from 'https';
 
 const debug = deb('app:index');
 
@@ -29,6 +31,8 @@ if (env.MONGOOSE_DEBUG) {
     });
 }
 
+
+
 // module.parent check is required to support mocha watch
 // src: https://github.com/mochajs/mocha/issues/1912
 if(!module.parent) {
@@ -38,7 +42,20 @@ if(!module.parent) {
     app.listen(port, () => {
         debug(`server started on port ${port} (${env.env})`);
     });
+
+    // if(process.env.NODE_ENV === 'production') {
+    //     const key = fs.readFileSync('sslcert/server.key', 'utf8');
+    //     const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+    //     const credentials = {
+    //         key: key,
+    //         cert: certificate
+    //     };
+    //
+    //     https.createServer(credentials, app);
+    // }
+    //
+    // app.listen('443', () => {
+    //     debug(`https server started on port 443 (${env.env})`);
+    // })
 }
 
-//deb('whatever');
-//deb2('whatever 2');
