@@ -1,0 +1,1 @@
+{"version":3,"sources":["config/config.js"],"names":["port","bodyLimit","corsHeaders"],"mappings":";;;;;kBAAe;AACXA,UAAM,IADK;AAEXC,eAAW,OAFA;AAGXC,iBAAa,CAAC,MAAD;AAHF,C","file":"config.js","sourceRoot":"../../../.."}

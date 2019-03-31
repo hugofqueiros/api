@@ -1,0 +1,1 @@
+{"version":3,"sources":["routes/tags.js"],"names":["router","express","Router","route","get","tagsCtrl"],"mappings":";;;;;;AAAA;;;;AAEA;;;;;;AAEA,IAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAEAF,OAAOG,KAAP,CAAa,GAAb,EACKC,GADL,CACSC,eAASD,GADlB;;kBAGeJ,M","file":"tags.js","sourceRoot":"../../../.."}

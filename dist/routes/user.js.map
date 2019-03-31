@@ -1,0 +1,1 @@
+{"version":3,"sources":["routes/user.js"],"names":["router","express","Router","route","get","userCtrl","list","param","load"],"mappings":";;;;;;AAAA;;;;AACA;;;;AACA;;;;;;AAEA,IAAMA,SAASC,kBAAQC,MAAR,EAAf,C,CAAiC;;AAEjCF,OAAOG,KAAP,CAAa,GAAb,EACKC,GADL,CACSC,eAASC,IADlB;;AAGAN,OAAOO,KAAP,CAAa,QAAb,EAAuBF,eAASG,IAAhC;;kBAEeR,M","file":"user.js","sourceRoot":"../../../.."}

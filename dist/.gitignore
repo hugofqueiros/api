@@ -40,4 +40,4 @@ jspm_packages
 .idea
 
 # Babel ES6 compiles files
-# dist
+dist

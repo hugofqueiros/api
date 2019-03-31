@@ -1,0 +1,1 @@
+{"version":3,"sources":["routes/medium.js"],"names":["router","express","Router","route","get","mediumCtrl","getPublications"],"mappings":";;;;;;AAAA;;;;AACA;;;;;;AAEA,IAAMA,SAASC,kBAAQC,MAAR,EAAf;;AAEAF,OAAOG,KAAP,CAAa,GAAb,EACKC,GADL,CACSC,iBAAWC,eADpB;;kBAGeN,M","file":"medium.js","sourceRoot":"../../../.."}

@@ -1,0 +1,121 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "hugofqueiros api",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp",
+    "lint": "esw *.js src --color",
+    "lint:watch": "yarn lint -- --watch",
+    "test": "cross-env NODE_ENV=test babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./test/**/*.test.js",
+    "test:watch": "yarn test -- --watch",
+    "test:check-coverage": "yarn test && istanbul check-coverage",
+    "report-coverage": "coveralls < ./coverage/lcov.info",
+    "dev": "nodemon --inspect -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build:old": "babel src -s -D -d dist --presets es2015,stage-2",
+    "prestart:old": "npm run -s build",
+    "test:old": "eslint src",
+    "start:old": "node dist",
+    "start2": "nodemon --inspect src/index.js --exec babel-node --presets es2015,stage-2",
+    "start3": "nodemon --debug src/index.js --exec babel-node --presets es2015,stage-2",
+    "start4": "node src/index.js",
+    "node:inspect": "node-inspector",
+    "build2": "babel src -d dist",
+    "serve": "node dist/index.js",
+    "serve:develpment": "NODE_ENV=development node index.js",
+    "serve:staging": "NODE_ENV=staging node index.js",
+    "serve:production": "NODE_ENV=production node index.js",
+    "test2": "mocha --compilers js:babel-register",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r",
+    "release:patch": "npm version patch -m \"chore(release): Bump to %s\"",
+    "release:minor": "npm version minor -m \"chore(release): Bump to %s\"",
+    "release:major": "npm version major -m \"chore(release): Bump to %s\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugofqueiros/api.git"
+  },
+  "author": "Hugo Queiros <hugofqueiros@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hugofqueiros/api/issues"
+  },
+  "homepage": "https://github.com/hugofqueiros/api#readme",
+  "private": true,
+  "engines": {
+    "node": ">=6",
+    "npm": ">=3",
+    "yarn": ">=0.18.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "bluebird": "3.4.7",
+    "body-parser": "1.15.2",
+    "compression": "1.6.2",
+    "cookie-parser": "1.4.3",
+    "cookie-session": "2.0.0-alpha.2",
+    "cors": "2.8.1",
+    "debug": "^2.6.0",
+    "express": "4.14.0",
+    "express-reverse": "0.3.2",
+    "express-session": "1.14.2",
+    "express-validation": "^1.0.1",
+    "express-winston": "^2.1.2",
+    "helmet": "3.4.0",
+    "http-status": "^0.2.5",
+    "joi": "^10.2.0",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.7",
+    "mongodb": "2.2.21",
+    "mongoose": "4.7.7",
+    "mongoose-validators": "^0.1.0",
+    "morgan": "1.7.0",
+    "parse-rss": "^1.0.3",
+    "passport": "0.3.2",
+    "passport-facebook": "2.1.1",
+    "passport-local": "1.0.0",
+    "rss-parser": "^2.5.2",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.21.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-stage-0": "6.16.0",
+    "babel-preset-stage-2": "6.18.0",
+    "coveralls": "^2.11.15",
+    "cross-env": "^3.1.4",
+    "del": "^2.2.2",
+    "eslint": "3.13.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-newer": "^1.3.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-util": "^3.0.8",
+    "isparta": "^4.0.0",
+    "mocha": "^3.2.0",
+    "nodemon": "1.11.0",
+    "run-sequence": "^1.2.2",
+    "snyk": "1.24.4",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2",
+    "validate-commit-msg": "^2.8.2"
+  }
+}
