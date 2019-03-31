@@ -4,8 +4,9 @@
   "description": "hugofqueiros api",
   "main": "src/index.js",
   "scripts": {
-    "start": "gulp serve",
-    "build": "gulp",
+    "start": "node dist/index.js",
+    "start:dev": "gulp serve",
+    "no:build": "gulp",
     "lint": "esw *.js src --color",
     "lint:watch": "yarn lint -- --watch",
     "test": "cross-env NODE_ENV=test babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./test/**/*.test.js",
@@ -44,9 +45,9 @@
   "homepage": "https://github.com/hugofqueiros/api#readme",
   "private": true,
   "engines": {
-    "node": ">=6",
-    "npm": ">=3",
-    "yarn": ">=0.18.0"
+    "node": "10.15.3",
+    "npm": "5.x",
+    "yarn": "1.x"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
