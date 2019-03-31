@@ -60,7 +60,7 @@ if (!module.parent) {
     // listen on port config.port
     var port = (0, _utils.normalizePort)(env.port || _config2.default.port);
 
-    _express2.default.listen(port, function () {
+    _express2.default.listen(process.env.PORT || port, function () {
         debug('server started on port ' + port + ' (' + env.env + ')');
     });
 

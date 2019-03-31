@@ -37,7 +37,7 @@ if(!module.parent) {
     // listen on port config.port
     const port = normalizePort(env.port || config.port);
 
-    app.listen(port, () => {
+    app.listen(process.env.PORT || port, () => {
         debug(`server started on port ${port} (${env.env})`);
     });
 
