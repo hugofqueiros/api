@@ -4,7 +4,7 @@
   "description": "hugofqueiros api",
   "main": "src/index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "NODE_ENV=production node dist/index.js",
     "start:dev": "gulp serve",
     "no:build": "gulp",
     "lint": "esw *.js src --color",
